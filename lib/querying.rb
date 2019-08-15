@@ -6,7 +6,9 @@ ORDER BY year ASC;"
 end
 
 def select_name_and_motto_of_char_with_longest_motto
-  "Write your SQL query here"
+"SELECT name, motto
+FROM  characters
+WHERE LENGTH(motto) = (SELECT MAX(LENGTH(motto)) FROM characters);"
 end
 
 
